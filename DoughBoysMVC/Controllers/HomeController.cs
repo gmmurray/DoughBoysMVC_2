@@ -27,9 +27,9 @@ namespace DoughBoysMVC.Controllers
         }
 
         [HttpPost]
-        public ViewResult PreOrder(Customer customer)
+        public ViewResult PreOrder(CustomerOrder customer)
         {
-            CustomerRepository.AddCustomer(customer);
+            CustomerOrderRepository.AddCustomer(customer);
             return View("Confirmation", customer);
         }
 

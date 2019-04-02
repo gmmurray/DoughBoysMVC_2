@@ -1,4 +1,4 @@
-﻿@model DoughBoysMVC.Models.Customer
+﻿@model DoughBoysMVC.Models.CustomerOrder
 @{
     ViewData["Title"] = "PreOrder";
 }
@@ -43,27 +43,32 @@
             </div>
 
             <div class="formRightCol">
-                <label asp-for="LastName">Last Name</label>
+                <label asp-for="LastName">Last Name*</label>
                 <input asp-for="LastName" />
             </div>
         </div>
 
         <div class="formRow">
             <div class="formLeftCol">
-                <label asp-for="PhoneNo">Phone Numer*</label>
+                <label asp-for="PhoneNo">Phone Number*</label>
                 <input asp-for="PhoneNo" />
             </div>
 
             <div class="formRightCol">
-                <label asp-for="Email">Email*</label>
+                <label asp-for="Email"></label>*
                 <input asp-for="Email" />
             </div>
         </div>
 
         <div class="formRow">
             <div class="formLeftCol">
-                Flavor:
-                <input type="checkbox" name="flavor">
+                Flavor* 
+                <select asp-for="DoughnutType">
+                    <option>Select</option>
+                    <option value="glazed">Glazed</option>
+                </select>
+                <label asp-for="Quantity"></label>*
+                <input asp-for="Quantity" class="fRight"/>
             </div>
             
             <div class="formRightCol">
