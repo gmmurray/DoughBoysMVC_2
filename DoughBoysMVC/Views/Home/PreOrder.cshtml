@@ -63,17 +63,23 @@
         <div class="formRow">
             <div class="formLeftCol">
                 Flavor* 
-                <select asp-for="DoughnutType">
-                    <option>Select</option>
-                    <option value="glazed">Glazed</option>
-                </select>
-                <label asp-for="Quantity"></label>*
-                <input asp-for="Quantity" class="fRight"/>
+                
+                    <select asp-for="DoughnutType" class="fRight inputSelect">
+                        <option>Select</option>
+                        <option value="glazed">Glazed</option>
+                    </select>
+       
+                
+                <div class="formRow">
+                    <label asp-for="Quantity"></label>*
+                    <input asp-for="Quantity" class="fRight" />
+                </div>
+                
             </div>
             
             <div class="formRightCol">
                 Preferred Pick-up:
-                <input type="date" name="pickupdate"> <input type="time" name="pickuptime">
+                <input asp-for="PickUpDate" type="date" />
             </div>
         </div>
 

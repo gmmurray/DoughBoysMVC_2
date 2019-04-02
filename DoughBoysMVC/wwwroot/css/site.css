@@ -196,21 +196,61 @@ input[type=text] {
     width:100%;
     padding:10px;
     border:none;
-    border-bottom:1px solid black;
-    
+    border-bottom:1px solid #8dcaff;
+    margin-top:9px;
+}
+.inputSelect {
+    -webkit-appearance:none;
+    background-color:white;
+    border:none;
+    border-bottom:1px solid #8dcaff;
+    border-radius:4px;
+    width:70%;
+    padding:10px;
 }
 
-input[type=number]{
+input[type=number] {
     border:none;
-    border-bottom:1px solid black;
+    border-bottom:1px solid #8dcaff;
     padding:10px;
     width:40%;
+    text-align:right;
 }
+
+input[type=date] {
+    width:100%;
+    padding:10px;
+    border:none;
+    border-bottom:1px solid #8dcaff;
+    margin-top:9px;
+}
+
+::-webkit-datetime-edit {
+    text-align: right;
+}
+
+::-webkit-datetime-edit-text {
+    color: #8dcaff;
+    padding: 0 0.3em;
+    text-align: right;
+}
+
+::-webkit-inner-spin-button {
+    display: none;
+}
+
 .preOrderBtn {
     background-color:#8dcaff;
     padding: 10px;
-    border:none;
+    border:1px solid #8dcaff;
     border-radius: 4px;
+    transition-duration:0.4s;
+    -webkit-transition-duration:0.4s;
+}
+
+.preOrderBtn:hover {
+    background-color:white;
+    border:1px solid #8dcaff;
 }
 
 .preOrderPage {
@@ -253,6 +293,7 @@ input[type=number]{
 		text-align:center;
 		width:100%;
 		height:15%;
+        margin-top:6px;
 }
 
 .footerDiv a {
