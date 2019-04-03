@@ -1,7 +1,8 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+
 
 namespace DoughBoysMVC.Models
 {
@@ -27,7 +28,9 @@ namespace DoughBoysMVC.Models
                 orderDate = value;
             }
         }
-        public double TotalCost //{ get; set; } 
+
+        
+        public decimal TotalCost //{ get; set; } 
         {
             get
             {
@@ -35,14 +38,36 @@ namespace DoughBoysMVC.Models
             }
         }
 
-        public double DoughnutPrice
+        public decimal DoughnutPrice
         {
             get
             {
-                if (DoughnutType == "glazed")
-                    return 2.99;
+                if (DoughnutType == "Glazed")
+                    return 2.49M;
+                else if (DoughnutType == "Chocolate Sprinkle")
+                    return 2.99M;
+                else if (DoughnutType == "Traditional Cake")
+                    return 2.99M;
+                else if (DoughnutType == "Strawberry Iced")
+                    return 2.99M;
+                else if (DoughnutType == "Cinnamon Sugar")
+                    return 2.99M;
+                else if (DoughnutType == "Powdered Cake")
+                    return 3.49M;
+                else if (DoughnutType == "Glazed Old Fashioned")
+                    return 3.99M;
+                else if (DoughnutType == "Glazed Blueberry Cake")
+                    return 3.99M;
+                else if (DoughnutType == "Birthday Cake Creme Filled")
+                    return 4.99M;
+                else if (DoughnutType == "Cinnamon Apple Filled")
+                    return 4.99M;
+                else if (DoughnutType == "Glazed Blueberry Filled")
+                    return 4.99M;
+                else if (DoughnutType == "Glazed Lemon Filled")
+                    return 4.99M;
                 else
-                    return 0.1;
+                    return 0.1M;
             }
         }
         public string DoughnutType { get; set; }
