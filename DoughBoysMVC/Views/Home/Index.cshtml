@@ -1,42 +1,53 @@
-﻿@{
+@{
     ViewData["Title"] = "Dough Boys";
 }
 
-
-    <div class="navBar">
-        <a href="Home" class="navLogo"><img src="~/images/logo.png"></a>
-        <div id="navHeader">
-            <ul>
-                <li class="activeItem"><a asp-action="Index">Home</a></li>
-                <li><a asp-action="Menu">Menu</a></li>
-                <li><a asp-action="PreOrder">Pre-Order</a></li>
-                <li><a asp-action="Questions">FAQ</a></li>
-                <li><a asp-action="AboutUs">About Us</a></li>
-            </ul>
-        </div>
+<div class="navBar">
+    <a href="Home" class="navLogo"><img src="~/images/logo.png"></a>
+    <div id="navHeader">
+        <ul>
+            <li class="activeItem"><a asp-action="Index">Home</a></li>
+            <li><a asp-action="Menu">Menu</a></li>
+            <li><a asp-action="PreOrder">Pre-Order</a></li>
+            <li><a asp-action="Questions">FAQ</a></li>
+            <li><a asp-action="AboutUs">About Us</a></li>
+        </ul>
     </div>
-
-    <div class="homeImg">
-        <div class="home-img-text">
-
-            <h1>High Quality Doughnuts & High Quality People</h1>
-        </div>
+</div>
+<div class="homeImg">
+    <div class="home-img-text">
+        <h1>High Quality Doughnuts & High Quality People</h1>
     </div>
-
-    <div class="mainText">
-        <h1>DOUGH BOYS</h1>
-        <!--maybe put in the middle of screen -->
-        <!-- see https://minibardonuts.com/ -->
-        <p class="center">
-            No longer will you have to stress about finding the perfect dougnut. You won't
-            need to persuade your friends and your loved ones for the spot to be, to enjoy
-            this form of dessert perfection.
-        </p>
-        <!--maybe put in the middle of screen -->
-        <p class="center">
-            At DoughBoys, our specialty donuts are at a higher tier than our other friends
-            around the Jacksonville area. Which means you won't need to go anywhere else but here!
-            Unlike other donut shops, our doughnuts are fuller and not tiny. We have a set 12
-            flavors on our site that you can look forward to eating.
-        </p>
-    </div>
+</div>
+<div class="mainText">
+    <h1>DOUGH BOYS</h1>
+    <!--maybe put in the middle of screen -->
+    <!-- see https://minibardonuts.com/ -->
+    <p class="center">
+        No longer will you have to stress about finding the perfect doughnut. Our doughnuts are made to
+        satisfy your sweet-tooth, and fullfill that long-lasting craving of fried dough you know you have.
+    </p>
+    <!--maybe put in the middle of screen -->
+    <p class="center">
+        At Dough Boys, our specialty doughnuts are at a higher tier than our other friends
+        around the Jacksonville area. The doughnuts here are made with love and care, and are
+        specialy made for you.
+    </p>
+</div>
+<div>
+    <a asp-action="Menu"><h2 class="mainText">Our Food</h2></a>
+    <p>
+        We take tremendous pride in crafting our doughnuts, made from high-quality ingredients.
+        If you already know what you want, you can pre-order online <a asp-action="PreOrder">here</a>.
+    </p>
+</div>
+<div>
+    <a asp-action="AboutUs"><h2 class="mainText">Who We Are</h2></a>
+    <p>
+        We are a company that cares about its community.
+        We strive to produce the highest quality-tasting doughnuts.
+        We care about the process about how everything you taste is made for you, by us.
+        If you have any concerns regarding our business, feel free to check out our
+        <a asp-action="Questions">FAQ page.</a>
+    </p>
+</div>
