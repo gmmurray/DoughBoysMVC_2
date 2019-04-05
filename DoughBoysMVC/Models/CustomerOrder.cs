@@ -30,7 +30,7 @@ namespace DoughBoysMVC.Models
         }
 
         
-        public decimal TotalCost //{ get; set; } 
+        public decimal TotalCost 
         {
             get
             {
