@@ -3,7 +3,7 @@
 }
 
 <div class="navBar">
-    <a href="Home" class="navLogo"><img src="~/images/logo.png"></a>
+    <a href="#" class="navLogo"><img src="~/images/logo.png"></a>
     <div id="navHeader">
         <ul>
             <li class="activeItem"><a asp-action="Index">Home</a></li>
@@ -36,16 +36,18 @@
         </p>
     </div>
 
+    <a asp-action="Menu" class="indexHead">Our Food</a>
+
     <div class="frontRow">
-        <a asp-action="Menu"><h2>Our Food</h2></a>
         <p>
             We take tremendous pride in crafting our doughnuts, made from high-quality ingredients.
             If you already know what you want, you can pre-order online <a asp-action="PreOrder">here</a>.
         </p>
     </div>
 
+    <a asp-action="AboutUs" class="indexHead">Who We Are</a>
+
     <div class="frontRow">
-        <a asp-action="AboutUs"><h2>Who We Are</h2></a>
         <p>
             We are a company that cares about its community.
             We strive to produce the highest quality-tasting doughnuts.

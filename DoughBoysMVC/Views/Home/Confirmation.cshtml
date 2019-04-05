@@ -4,7 +4,7 @@
 }
 
 <div class="navBar">
-    <a href="Home" class="navLogo"><img src="~/images/logo.png"></a>
+    <a href="Index" class="navLogo"><img src="~/images/logo.png"></a>
     <div id="navHeader">
         <ul>
             <li><a asp-action="Index">Home</a></li>
@@ -17,7 +17,7 @@
 </div>
 
 <p>
-    <h1>Thank you @Model.FirstName for your order</h1>
+    <h2>Thank you @Model.FirstName for your order</h2>
     An email will be sent to @Model.Email containing a copy of your order confirmation.
 </p>
 <h2>Order#@Model.OrderNo Details</h2>

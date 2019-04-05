@@ -7,6 +7,10 @@ body, html {
 .wallpaper {
     background-image: url("../images/whitewall.png")
 }
+.mainText {
+    text-align: center;
+    display:block;
+}
 
 .homeImg {
     background-image: url("../images/homeimage.jpg");
@@ -94,26 +98,34 @@ body, html {
 
 .container {
     text-align: center;
-    margin-left: 20%;
-    margin-right: 20%;
+    width:100%;
+    display:block;
 }
 
 .frontCol {
-    width: 45%;
+    width: 40%;
+    margin-left:5%;
+    margin-right:5%;
 }
 
 .frontRow {
-    margin-top: 5px;
-    margin-bottom: 5px;
+    margin:5px auto;
+    display:flex;
+    text-align:center;
+    width:60%;
 }
 
-    .frontRow a {
-        color: #8dcaff;
-        text-decoration: none;
-        display:inline-block;
-        margin:0;
+.frontRow a {
+    color: #8dcaff;
+    text-decoration: none;
+}
 
-    }
+.indexHead {
+    color: #8dcaff;
+    text-decoration: none;
+    font-weight:bold;
+    font-size:1.5em;
+}
 
 * {
     box-sizing: border-box;
@@ -364,4 +376,10 @@ input[type=date] {
     background-color: white;
     padding: 6px;
     border: 1px solid #6D6E71;
+}
+
+#mapImg {
+    max-height: 100%;
+    max-width: 100%;
+    border: 2px solid #8dcaff;
 }
