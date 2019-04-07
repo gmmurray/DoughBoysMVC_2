@@ -25,6 +25,7 @@
     -Doughnut flavors drop down?
 --->
 <div class="preOrderPage">
+    <link rel ="stylesheet" href="~/css/site.css" />
     <h2 class="mainText">Pre-Order and Catering </h2>
     
     <p>
@@ -36,6 +37,7 @@
     </p>
 
     <form asp-action="PreOrder" method="post">
+        <div asp-validation-summary="All"></div>
         <div class="formRow">
             <div class="formLeftCol">
                 <label asp-for="FirstName">First Name*</label>
