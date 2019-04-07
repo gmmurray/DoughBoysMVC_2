@@ -321,6 +321,30 @@ input[type=date] {
     margin-bottom: 10px;
 }
 
+/* These are for the PreOrder validation if you want to make changes feel free too. */
+.field-validation-error {
+    color: #f00;
+}
+
+.field-validation-valid {
+    display: none;
+}
+
+.input-validation-error {
+    border: 1px solid #f00;
+    background-color: #fee;
+}
+
+.validation-summary-errors {
+    font-weight: bold;
+    color: #f00;
+}
+
+.validation-summary-valid {
+    display: none;
+}
+/* The validations for PreOrder stop here */
+
 .socialMediaDiv {
     padding-top: 10px;
 }
