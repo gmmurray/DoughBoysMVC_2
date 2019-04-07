@@ -31,7 +31,7 @@ namespace DoughBoysMVC.Controllers
         {
              if (ModelState.IsValid)
             {
-                CustomerRepository.AddCustomer(customer);
+                CustomerOrderRepository.AddCustomer(customer);
                 return View("Confirmation", customer);
             }//end if
             
