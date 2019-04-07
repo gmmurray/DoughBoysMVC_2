@@ -9,20 +9,23 @@ namespace DoughBoysMVC.Models
 {
     public class CustomerOrder
     {
-       [Required(ErrorMessage = "Please enter your first name")]
+        [Required(ErrorMessage = "Please enter your first name.")]
         public string FirstName { get; set; }
 
+        [Required(ErrorMessage = "Please enter your last name.")]
         public string LastName { get; set; }
 
-        [Required(ErrorMessage = "Please enter your phone number")]
+        [Required(ErrorMessage = "Please enter your phone number.")]
         public string PhoneNo { get; set; }
 
-        [Required(ErrorMessage = "Please enter your email address")]
+        [Required(ErrorMessage = "Please enter your email address.")]
         [RegularExpression(".+\\@.+\\..+", 
-        ErrorMessage = "Please enter a valid email address")]
+        ErrorMessage = "Please enter a valid email address.")]
         public string Email { get; set; }
         
         public int OrderNo { get; set; }
+
+        [Required(ErrorMessage = "Please select a pick-up date.")]
         public string PickUpDate { get; set; }
 
         private string orderDate;
@@ -44,7 +47,8 @@ namespace DoughBoysMVC.Models
         {
             get
             {
-                return Quantity * DoughnutPrice;
+
+                return (int)Quantity * DoughnutPrice;
             }
         }
 
@@ -80,7 +84,12 @@ namespace DoughBoysMVC.Models
                     return 0.1M;
             }
         }
+
+        [Required(ErrorMessage = "Please select a doughnut to pre-order.")]
         public string DoughnutType { get; set; }
-        public int Quantity { get; set; }
+
+        [Required(ErrorMessage = "Please enter the quantity of doughnuts.")]
+        [Range(1,100, ErrorMessage = "Please enter a valid quantity of doughnuts (1-100)")]
+        public int? Quantity { get; set; }
     }
 }

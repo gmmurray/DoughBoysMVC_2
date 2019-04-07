@@ -127,6 +127,11 @@ body, html {
     font-size:1.5em;
 }
 
+    .indexHead a {
+        color: #8dcaff;
+        text-decoration: none;
+    }
+
 * {
     box-sizing: border-box;
 }
@@ -321,17 +326,11 @@ input[type=date] {
     margin-bottom: 10px;
 }
 
-/* These are for the PreOrder validation if you want to make changes feel free too. */
 .field-validation-error {
     color: #f00;
 }
 
-.field-validation-valid {
-    display: none;
-}
-
 .input-validation-error {
-    border: 1px solid #f00;
     background-color: #fee;
 }
 
@@ -343,7 +342,7 @@ input[type=date] {
 .validation-summary-valid {
     display: none;
 }
-/* The validations for PreOrder stop here */
+
 
 .socialMediaDiv {
     padding-top: 10px;

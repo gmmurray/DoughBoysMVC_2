@@ -30,14 +30,14 @@ namespace DoughBoysMVC.Controllers
         public ViewResult PreOrder(CustomerOrder customer)
         {
              if (ModelState.IsValid)
-            {
+             {
                 CustomerOrderRepository.AddCustomer(customer);
                 return View("Confirmation", customer);
-            }//end if
+             }
             
             else {
                 return View();
-            }//end else
+            }
         }
 
         public ViewResult Questions()

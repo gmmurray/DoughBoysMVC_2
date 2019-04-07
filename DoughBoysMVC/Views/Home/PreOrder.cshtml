@@ -16,37 +16,31 @@
     </div>
 </div>
 
-<!--
-    TODO:
-    -Connect fields with models
-    -Create rules for ordering: 
-        only one type of doughnut per order, as many doughnuts as customer wants in that order
-        specify pick up times
-    -Doughnut flavors drop down?
---->
 <div class="preOrderPage">
-    <link rel ="stylesheet" href="~/css/site.css" />
     <h2 class="mainText">Pre-Order and Catering </h2>
     
     <p>
-        Our Pre-Ordering and Catering is available during our normal working hours. 
+        Orders must be placed 24 hours prior to your preferred pick up date. Feel free to pre-order as many
+        doughnuts as you'd like, but you can only select one type of doughnut per order.
     </p>
     
     <p>
-        Orders must be placed 24 hours prior to your preferred pick up date, and must be a half-dozen or larger.
+        Once you place your order, your doughnuts will be ready for pick up on the day you select.
+        You can come in anytime on that day between 10:00 am and 3:00 pm to pay and pick up your doughnuts.
     </p>
 
     <form asp-action="PreOrder" method="post">
-        <div asp-validation-summary="All"></div>
         <div class="formRow">
             <div class="formLeftCol">
-                <label asp-for="FirstName">First Name*</label>
-                <input asp-for="FirstName" />
+                <label asp-for="FirstName">First Name</label>
+                <input asp-for="FirstName" />          
+                <span asp-validation-for="FirstName"></span>
             </div>
 
             <div class="formRightCol">
-                <label asp-for="LastName">Last Name*</label>
+                <label asp-for="LastName">Last Name</label>
                 <input asp-for="LastName" />
+                <span asp-validation-for="LastName"></span>
             </div>
         </div>
 
@@ -54,38 +48,47 @@
             <div class="formLeftCol">
                 <label asp-for="PhoneNo">Phone Number*</label>
                 <input asp-for="PhoneNo" />
+                <span asp-validation-for="PhoneNo"></span>
             </div>
 
             <div class="formRightCol">
-                <label asp-for="Email"></label>*
+                <label asp-for="Email"></label>
                 <input asp-for="Email" />
+                <span asp-validation-for="Email"></span>
             </div>
         </div>
 
         <div class="formRow">
             <div class="formLeftCol">
-                Flavor* 
-                
-                <select asp-for="DoughnutType" class="fRight inputSelect">
-                    <option>Select</option>
-                    <option value="Glazed">Glazed</option>
-                    <option value="Chocolate Sprinkle">Chocolate Sprinkle</option>
-                    <option value="Traditional Cake">Traditional Cake</option>
-                    <option value="Strawberry Iced">Strawberry Iced</option>
-                    <option value="Cinnamon Sugar">Cinnamon Sugar</option>
-                    <option value="Powdered Cake">Powdered Cake</option>
-                    <option value="Glazed Old Fashioned">Glazed Old Fashioned</option>
-                    <option value="Glazed Blueberry Cake">Glazed Blueberry Cake</option>
-                    <option value="Birthday Cake Creme Filled">Birthday Cake Creme Filled</option>
-                    <option value="Cinnamon Apple Filled">Cinnamon Apple Filled</option>
-                    <option value="Glazed Blueberry Filled">Glazed Blueberry Filled</option>
-                    <option value="Glazed Lemon Filled">Glazed Lemon Filled</option>
-                </select>
-       
+                <div class="formRow">
+                    Flavor
+                    <select asp-for="DoughnutType" class="fRight inputSelect">
+                        <option value="">Select</option>
+                        <option value="Glazed">Glazed</option>
+                        <option value="Chocolate Sprinkle">Chocolate Sprinkle</option>
+                        <option value="Traditional Cake">Traditional Cake</option>
+                        <option value="Strawberry Iced">Strawberry Iced</option>
+                        <option value="Cinnamon Sugar">Cinnamon Sugar</option>
+                        <option value="Powdered Cake">Powdered Cake</option>
+                        <option value="Glazed Old Fashioned">Glazed Old Fashioned</option>
+                        <option value="Glazed Blueberry Cake">Glazed Blueberry Cake</option>
+                        <option value="Birthday Cake Creme Filled">Birthday Cake Creme Filled</option>
+                        <option value="Cinnamon Apple Filled">Cinnamon Apple Filled</option>
+                        <option value="Glazed Blueberry Filled">Glazed Blueberry Filled</option>
+                        <option value="Glazed Lemon Filled">Glazed Lemon Filled</option>
+                    </select>
+                    
+                </div>
+                <div class="formRow">
+                    <span asp-validation-for="DoughnutType"></span>
+                </div>
                 
                 <div class="formRow">
-                    <label asp-for="Quantity"></label>*
+                    <label asp-for="Quantity"></label>
                     <input asp-for="Quantity" class="fRight" />
+                </div>
+                <div class="formRow">
+                    <span asp-validation-for="Quantity"></span>
                 </div>
                 
             </div>
@@ -93,12 +96,14 @@
             <div class="formRightCol">
                 Preferred Pick-up:
                 <input asp-for="PickUpDate" type="date" />
+                <span asp-validation-for="PickUpDate"></span>
             </div>
         </div>
 
-        <p>
+        <div class="formRow">
             If you are ready to place your order, please click the button below.
-        </p>
+        </div>
+
         <div class="formRow">
             <button type="submit" class="preOrderBtn">Pre-Order Now</button>
         </div>
