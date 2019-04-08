@@ -136,6 +136,11 @@ body, html {
     box-sizing: border-box;
 }
 
+.themeHorizontal {
+    border:2px solid white;
+    width:60%;
+}
+
 .row {
     text-align: center;
     margin-bottom: 20px;
