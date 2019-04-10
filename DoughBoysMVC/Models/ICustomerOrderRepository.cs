@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace DoughBoysMVC.Models
 {
-    interface ICustomerOrderRepository
+    public interface ICustomerOrderRepository
     {
         IEnumerable<CustomerOrder> CustomerOrders { get; }
     }
