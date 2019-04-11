@@ -16,7 +16,7 @@ namespace DoughBoysMVC.Models
         public string LastName { get; set; }
 
         [Required(ErrorMessage = "Please enter your phone number.")]
-        public string PhoneNo { get; set; }
+        public string PhoneNoID { get; set; }
 
         [Required(ErrorMessage = "Please enter your email address.")]
         [RegularExpression(".+\\@.+\\..+", 
