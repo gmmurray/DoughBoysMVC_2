@@ -13,5 +13,11 @@ namespace DoughBoysMVC.Models
             context = ctx;
         }
         public IEnumerable<CustomerOrder> CustomerOrders => context.CustomerOrders;
+
+        public void SaveCustomerOrder(CustomerOrder customerOrder)
+        {
+                context.CustomerOrders.Add(customerOrder);
+            context.SaveChanges();
+        }
     }
 }

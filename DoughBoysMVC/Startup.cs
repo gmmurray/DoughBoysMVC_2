@@ -19,9 +19,7 @@ namespace DoughBoysMVC
         IConfigurationRoot Configuration;
         public Startup(IHostingEnvironment env)
         {
-            Configuration = new ConfigurationBuilder()
-                .SetBasePath(env.ContentRootPath)
-                .AddJsonFile("appsettings.json").Build();
+            Configuration = new ConfigurationBuilder().SetBasePath(env.ContentRootPath).AddJsonFile("appsettings.json").Build();
         }
 
 

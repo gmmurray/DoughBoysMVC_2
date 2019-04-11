@@ -10,6 +10,11 @@ namespace DoughBoysMVC.Controllers
 {
     public class HomeController : Controller
     {
+        private ICustomerOrderRepository repository;
+        public HomeController(ICustomerOrderRepository repoService)
+        {
+            repository = repoService;
+        }
         public ViewResult Index()
         {
             return View();
@@ -31,7 +36,10 @@ namespace DoughBoysMVC.Controllers
         {
              if (ModelState.IsValid)
              {
+                Random random = new Random();
                 CustomerOrderRepository.AddCustomer(customer);
+                customer.OrderNo = random.Next();
+                repository.SaveCustomerOrder(customer);
                 return View("Confirmation", customer);
              }
             

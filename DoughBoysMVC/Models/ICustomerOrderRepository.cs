@@ -8,5 +8,6 @@ namespace DoughBoysMVC.Models
     public interface ICustomerOrderRepository
     {
         IEnumerable<CustomerOrder> CustomerOrders { get; }
+        void SaveCustomerOrder(CustomerOrder customerOrder);
     }
 }

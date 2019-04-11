@@ -22,7 +22,8 @@ namespace DoughBoysMVC.Models
         [RegularExpression(".+\\@.+\\..+", 
         ErrorMessage = "Please enter a valid email address.")]
         public string Email { get; set; }
-        
+       
+        [Key]
         public int OrderNo { get; set; }
 
         [Required(ErrorMessage = "Please select a pick-up date.")]
