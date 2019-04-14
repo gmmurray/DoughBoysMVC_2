@@ -5,15 +5,17 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using DoughBoysMVC.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace DoughBoysMVC.Controllers
 {
     public class HomeController : Controller
     {
         private ICustomerOrderRepository repository;
-        public HomeController(ICustomerOrderRepository repoService)
+       
+        public HomeController(ICustomerOrderRepository repo)
         {
-            repository = repoService;
+            repository = repo;
         }
         public ViewResult Index()
         {
@@ -36,9 +38,6 @@ namespace DoughBoysMVC.Controllers
         {
              if (ModelState.IsValid)
              {
-                Random random = new Random();
-                CustomerOrderRepository.AddCustomer(customer);
-                customer.OrderNo = random.Next();
                 repository.SaveCustomerOrder(customer);
                 return View("Confirmation", customer);
              }
