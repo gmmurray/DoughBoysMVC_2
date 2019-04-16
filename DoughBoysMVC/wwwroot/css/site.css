@@ -440,3 +440,7 @@ input[type=date] {
     border: 1px solid black;
     
 }
+
+.responsiveTable {
+    overflow-x: auto;
+}
