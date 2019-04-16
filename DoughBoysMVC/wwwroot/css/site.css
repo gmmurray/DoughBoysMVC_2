@@ -384,23 +384,25 @@ input[type=date] {
     overflow-x: auto;
     width: 100%;
     margin-bottom: 5%;
+    text-align: center;
 }
 
 .confTable {
     border: 1px solid #6D6E71;
     border-collapse: collapse;
-    width: 100%;
+    width: 80%;
     text-align: left;
+    margin: 0 10%;
 }
 
-.confTableHead th {
+.confTable th {
     background-color: #8dcaff;
     text-align: left;
     padding: 6px 10px;
     border: 1px solid #6D6E71;
 }
 
-.confTableElement td {
+.confTable td {
     background-color: white;
     padding: 6px;
     border: 1px solid #6D6E71;
@@ -410,4 +412,31 @@ input[type=date] {
     max-height: 100%;
     max-width: 100%;
     border: 2px solid #8dcaff;
+}
+
+.adminOrderContainer {
+    overflow-x: auto;
+    width: 100%;
+    margin-bottom: 10%;
+}
+
+.adminOrderTable {
+    border: 1px solid #6D6E71;
+    width: 80%;
+    margin: 0 10%;
+    border-collapse: collapse;
+}
+
+.adminOrderTable th {
+    background-color: #8dcaff;
+    text-align: center;
+    padding: 6px 10px;
+    border: 1px solid black;
+}
+
+.adminOrderTable td {
+    text-align: center;
+    padding: 6px;
+    border: 1px solid black;
+    
 }

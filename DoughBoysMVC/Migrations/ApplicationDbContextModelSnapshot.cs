@@ -39,6 +39,8 @@ namespace DoughBoysMVC.Migrations
 
                     b.Property<string>("OrderDate");
 
+                    b.Property<bool>("OrderStatus");
+
                     b.Property<string>("PhoneNo")
                         .IsRequired();
 

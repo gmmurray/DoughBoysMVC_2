@@ -1,0 +1,53 @@
+﻿@model IEnumerable<CustomerOrder>
+@{
+    ViewData["Title"] = "Order List";
+}
+<h1 class="mainText">Orders</h1>
+@if (Model.Count() > 0)
+{
+    <div class="adminOrderContainer">
+        <table class="adminOrderTable">
+            <tr>
+                <th>Order #</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Phone #</th>
+                <th>Email</th>
+                <th>Order Date</th>
+                <th>Pick Up Date</th>
+                <th>Doughnut</th>
+                <th>Quantity</th>
+                <th>Total</th>
+                <th></th>
+            </tr>
+            @foreach (CustomerOrder x in Model)
+            {
+                <tr>
+                    <td>@x.OrderNo</td>
+                    <td>@x.FirstName</td>
+                    <td>@x.LastName</td>
+                    <td>@x.PhoneNo</td>
+                    <td>@x.Email</td>
+                    <td>@x.OrderDate</td>
+                    <td>@x.PickUpDate</td>
+                    <td>@x.DoughnutType</td>
+                    <td>@x.Quantity</td>
+                    <td>$@x.TotalCost</td>
+                    <td>
+                        <form asp-action="Update" method="post">
+                            <input type="hidden" name="id" value="@x.OrderNo" />
+                            <button type="submit" class="preOrderBtn">Ship</button>
+                        </form>
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
+
+}
+else
+{
+    <div class="confTableContainer mainText">No Unshipped Orders</div>
+}
+
+

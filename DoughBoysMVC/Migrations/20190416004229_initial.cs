@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace DoughBoysMVC.Migrations
 {
-    public partial class Initial : Migration
+    public partial class initial : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -20,7 +20,8 @@ namespace DoughBoysMVC.Migrations
                     PickUpDate = table.Column<string>(nullable: false),
                     OrderDate = table.Column<string>(nullable: true),
                     DoughnutType = table.Column<string>(nullable: false),
-                    Quantity = table.Column<int>(nullable: false)
+                    Quantity = table.Column<int>(nullable: false),
+                    OrderStatus = table.Column<bool>(nullable: false)
                 },
                 constraints: table =>
                 {

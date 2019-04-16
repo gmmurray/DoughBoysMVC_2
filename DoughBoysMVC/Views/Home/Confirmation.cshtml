@@ -16,14 +16,16 @@
     </div>
 </div>
 
-<p>
-    <h2>Thank you @Model.FirstName for your order</h2>
-    An email will be sent to @Model.Email containing a copy of your order confirmation.
-</p>
-<h2>Order#@Model.OrderNo Details</h2>
+
+
 <div class="confTableContainer">
+    <p>
+        <h2>Thank you @Model.FirstName for your order</h2>
+        An email will be sent to @Model.Email containing a copy of your order confirmation.
+    </p>
+    <h2 class="mainText">Order#@Model.OrderNo Details</h2>
     <table class="confTable">
-        <tr class="confTableHead">
+        <tr class="confTable">
             <th>First Name</th>
             <th>Last Name</th>
             <th>Phone Number</th>
@@ -34,7 +36,7 @@
             <th>Total</th>
         </tr>
 
-        <tr class="confTableElement">
+        <tr class="confTable">
             <td>@Model.FirstName</td>
             <td>@Model.LastName</td>
             <td>@Model.PhoneNo</td>

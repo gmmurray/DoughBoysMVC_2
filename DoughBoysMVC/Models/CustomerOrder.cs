@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
+using Microsoft.AspNetCore.Mvc.ModelBinding;
 
 
 namespace DoughBoysMVC.Models
@@ -92,5 +93,8 @@ namespace DoughBoysMVC.Models
         [Required(ErrorMessage = "Please enter the quantity of doughnuts.")]
         [Range(1,100, ErrorMessage = "Please enter a valid quantity of doughnuts (1-100)")]
         public int? Quantity { get; set; }
+
+    
+        public bool OrderStatus { get; set; }
     }
 }

@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DoughBoysMVC.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20190414215244_Initial")]
-    partial class Initial
+    [Migration("20190416004229_initial")]
+    partial class initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -40,6 +40,8 @@ namespace DoughBoysMVC.Migrations
                         .IsRequired();
 
                     b.Property<string>("OrderDate");
+
+                    b.Property<bool>("OrderStatus");
 
                     b.Property<string>("PhoneNo")
                         .IsRequired();
