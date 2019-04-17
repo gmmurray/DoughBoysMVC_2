@@ -16,8 +16,6 @@ namespace DoughBoysMVC.Models
 
         public void SaveCustomerOrder(CustomerOrder customerOrder)
         {
-            //context.CustomerOrders.Add(customerOrder);
-            //context.SaveChanges();
             if (customerOrder.OrderNo == 0)
             {
                 context.CustomerOrders.Add(customerOrder);

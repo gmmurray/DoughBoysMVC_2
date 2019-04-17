@@ -33,10 +33,10 @@ namespace DoughBoysMVC.Migrations
                 columns: new[] { "OrderNo", "DoughnutType", "Email", "FirstName", "LastName", "OrderDate", "OrderStatus", "PhoneNo", "PickUpDate", "Quantity" },
                 values: new object[,]
                 {
-                    { 200, "Glazed", "email@email.com", "Greg", "M", "4/16/2019", false, "1234567890", "4/19/2019", 17 },
-                    { 201, "Cinnamon Sugar", "email@email.com", "John", "Doe", "4/16/2019", false, "1234567890", "4/19/2019", 29 },
-                    { 202, "Glazed", "email@email.com", "Jane", "Doe", "4/16/2019", false, "1234567890", "4/19/2019", 75 },
-                    { 203, "Glazed", "email@email.com", "James", "Jameson", "4/16/2019", false, "1234567890", "4/19/2019", 99 }
+                    { 200, "Glazed", "email@email.com", "Greg", "M", "4/17/2019", false, "1234567890", "4/19/2019", 17 },
+                    { 201, "Cinnamon Sugar", "email@email.com", "John", "Doe", "4/17/2019", false, "1234567890", "4/19/2019", 29 },
+                    { 202, "Glazed", "email@email.com", "Jane", "Doe", "4/17/2019", false, "1234567890", "4/19/2019", 75 },
+                    { 203, "Glazed", "email@email.com", "James", "Jameson", "4/17/2019", false, "1234567890", "4/19/2019", 99 }
                 });
         }
 
