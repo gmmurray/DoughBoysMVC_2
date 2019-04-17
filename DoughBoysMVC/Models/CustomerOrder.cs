@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
+using Microsoft.AspNetCore.Mvc.ModelBinding;
 
 
 namespace DoughBoysMVC.Models
@@ -22,7 +23,8 @@ namespace DoughBoysMVC.Models
         [RegularExpression(".+\\@.+\\..+", 
         ErrorMessage = "Please enter a valid email address.")]
         public string Email { get; set; }
-        
+       
+        [Key]
         public int OrderNo { get; set; }
 
         [Required(ErrorMessage = "Please select a pick-up date.")]
@@ -91,5 +93,8 @@ namespace DoughBoysMVC.Models
         [Required(ErrorMessage = "Please enter the quantity of doughnuts.")]
         [Range(1,100, ErrorMessage = "Please enter a valid quantity of doughnuts (1-100)")]
         public int? Quantity { get; set; }
+
+    
+        public bool OrderStatus { get; set; }
     }
 }

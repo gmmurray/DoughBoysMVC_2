@@ -5,11 +5,18 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using DoughBoysMVC.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace DoughBoysMVC.Controllers
 {
     public class HomeController : Controller
     {
+        private ICustomerOrderRepository repository;
+       
+        public HomeController(ICustomerOrderRepository repo)
+        {
+            repository = repo;
+        }
         public ViewResult Index()
         {
             return View();
@@ -31,7 +38,7 @@ namespace DoughBoysMVC.Controllers
         {
              if (ModelState.IsValid)
              {
-                CustomerOrderRepository.AddCustomer(customer);
+                repository.SaveCustomerOrder(customer);
                 return View("Confirmation", customer);
              }
             
