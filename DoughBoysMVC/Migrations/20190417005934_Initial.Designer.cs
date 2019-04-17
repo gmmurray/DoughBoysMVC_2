@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DoughBoysMVC.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20190416004229_initial")]
-    partial class initial
+    [Migration("20190417005934_Initial")]
+    partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

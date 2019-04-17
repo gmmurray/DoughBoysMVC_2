@@ -37,7 +37,7 @@
                         <td>
                             <form asp-action="Update" method="post">
                                 <input type="hidden" name="id" value="@x.OrderNo" />
-                                <button type="submit" class="preOrderBtn">Ship</button>
+                                <button type="submit" class="preOrderBtn">Fulfill</button>
                             </form>
                         </td>
                     </tr>
@@ -48,7 +48,7 @@
 }
 else
 {
-    <div class="confTableContainer mainText">No Unshipped Orders</div>
+    <div class="confTableContainer mainText">No Unfulfilled Orders</div>
 }
 
 
