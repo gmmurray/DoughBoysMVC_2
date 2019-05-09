@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DoughBoysMVC.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20190417161433_initial")]
-    partial class initial
+    [Migration("20190509162723_Initial")]
+    partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -64,7 +64,7 @@ namespace DoughBoysMVC.Migrations
                             Email = "email@email.com",
                             FirstName = "Greg",
                             LastName = "M",
-                            OrderDate = "4/17/2019",
+                            OrderDate = "5/9/2019",
                             OrderStatus = false,
                             PhoneNo = "1234567890",
                             PickUpDate = "4/19/2019",
@@ -77,7 +77,7 @@ namespace DoughBoysMVC.Migrations
                             Email = "email@email.com",
                             FirstName = "John",
                             LastName = "Doe",
-                            OrderDate = "4/17/2019",
+                            OrderDate = "5/9/2019",
                             OrderStatus = false,
                             PhoneNo = "1234567890",
                             PickUpDate = "4/19/2019",
@@ -90,7 +90,7 @@ namespace DoughBoysMVC.Migrations
                             Email = "email@email.com",
                             FirstName = "Jane",
                             LastName = "Doe",
-                            OrderDate = "4/17/2019",
+                            OrderDate = "5/9/2019",
                             OrderStatus = false,
                             PhoneNo = "1234567890",
                             PickUpDate = "4/19/2019",
@@ -103,7 +103,7 @@ namespace DoughBoysMVC.Migrations
                             Email = "email@email.com",
                             FirstName = "James",
                             LastName = "Jameson",
-                            OrderDate = "4/17/2019",
+                            OrderDate = "5/9/2019",
                             OrderStatus = false,
                             PhoneNo = "1234567890",
                             PickUpDate = "4/19/2019",
